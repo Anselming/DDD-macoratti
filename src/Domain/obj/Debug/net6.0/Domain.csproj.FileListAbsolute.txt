@@ -1,0 +1,12 @@
+/home/thiago/Projects/DDD-macoratti/src/Domain/bin/Debug/net6.0/Domain.deps.json
+/home/thiago/Projects/DDD-macoratti/src/Domain/bin/Debug/net6.0/Domain.dll
+/home/thiago/Projects/DDD-macoratti/src/Domain/bin/Debug/net6.0/Domain.pdb
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.dll
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/refint/Domain.dll
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/Domain.pdb
+/home/thiago/Projects/DDD-macoratti/src/Domain/obj/Debug/net6.0/ref/Domain.dll
