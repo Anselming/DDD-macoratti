@@ -13,3 +13,5 @@
 /home/thiago/Projects/DDD-macoratti/src/Contatos.Infra/bin/Debug/net6.0/Contatos.Domain.dll
 /home/thiago/Projects/DDD-macoratti/src/Contatos.Infra/bin/Debug/net6.0/Contatos.Domain.pdb
 /home/thiago/Projects/DDD-macoratti/src/Contatos.Infra/obj/Debug/net6.0/Contatos.Infra.csproj.CopyComplete
+/home/thiago/Projects/DDD-macoratti/src/Contatos.Infra/bin/Debug/net6.0/Contatos.Infra.runtimeconfig.json
+/home/thiago/Projects/DDD-macoratti/src/Contatos.Infra/obj/Debug/net6.0/Contatos.Infra.genruntimeconfig.cache
