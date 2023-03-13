@@ -3,7 +3,7 @@ using Anselme.Contatos.Infrastructure.Contexts;
 
 namespace Anselme.Contatos.Infrastructure.Repositories
 {
-    public class ContatoRepository : Repository<Contato>
+    public class ContatoRepository : BaseRepository<Contato>
     {
         public ContatoRepository(AppDbContext context) : base(context)
         {

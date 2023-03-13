@@ -18,7 +18,7 @@ namespace Anselme.Contatos.Domain.Models
             if(contato == null)
             {
                 contato = new Contato(nome, email);
-                _contatoRepository.Save(contato);
+                _contatoRepository.CreateNew(contato);
             }
             else
             {

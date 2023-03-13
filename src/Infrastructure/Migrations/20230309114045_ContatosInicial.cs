@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Contatos.Infra.Migrations
+namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class ContatosInicial : Migration

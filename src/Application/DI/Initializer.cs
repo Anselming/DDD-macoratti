@@ -14,7 +14,7 @@ public class Inicializer
         services.AddDbContext<AppDbContext>(o => o.UseSqlServer(connection));
 
         services.AddScoped(typeof(IRepository<Contato>), typeof(ContatoRepository));
-        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
         services.AddScoped(typeof(ContatoService));
         services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 

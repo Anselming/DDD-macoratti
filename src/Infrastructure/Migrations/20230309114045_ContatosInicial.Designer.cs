@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Contatos.Infra.Migrations
+namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230307114211_ContatosInicial")]
+    [Migration("20230309114045_ContatosInicial")]
     partial class ContatosInicial
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Contatos.Infra.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Contatos.Domain.Models.Contato", b =>
+            modelBuilder.Entity("Anselme.Contatos.Domain.Models.Contato", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

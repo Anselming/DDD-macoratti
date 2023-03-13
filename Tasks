@@ -1,0 +1,33 @@
+1 - Criar o repositóry async
+	- colocar numa classe parcial
+
+2 - Estruturar para usar IAgrregateRoot
+	- Modificar o repositório para lidar com IAgrregateRoot
+	- criar uma agregação mais completa, com VO e Outras Entidades
+
+3 - Utilizar o Assertion COncert
+
+4 - Utilizar o AutoMapper
+
+5 - Utilizar o Fluent Validation
+
+
+Procurar por outras boas práticas
+Fechar o Projeto
+Documentar
+
+--------
+Avançar com o DDD
+- Mapa de Agregados
+- Mapa C4
+- Entender o PlantUML
+
+- Estruturar toda a solução DDD (sem uso dos demais delementos (DomainEvent, etc.)
+===================================
+
+Adaptar o AnselmeX
+Começar a estudar os demais elementos do DDD
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
