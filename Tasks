@@ -4,12 +4,24 @@
 2 - Estruturar para usar IAgrregateRoot
 	- Modificar o repositório para lidar com IAgrregateRoot
 	- criar uma agregação mais completa, com VO e Outras Entidades
+	- Fazer a funcionalidade completa da classe CPF
+	- Estruturar a solução para guardar o CPF numa coluna
+	- Criar outra estrutura de Cliente (Pessoa Jurídica) que pode ter n contatos
+	- Nesse caso Cliente passa a ser o AgrregateRoot
+	============
+	- Criar outra Estrutura com as Compras realizadas
+	- Ordem de Compra
+	- Item da ordem de Compra
+	- Produto
+	- Essa estrutura será bem mais rica, mas para o mesmo contexto.
 
 3 - Utilizar o Assertion COncert
 
 4 - Utilizar o AutoMapper
 
 5 - Utilizar o Fluent Validation
+
+6 - Criar testes
 
 
 Procurar por outras boas práticas

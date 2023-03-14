@@ -2,11 +2,11 @@ using Anselme.Contatos.Domain.Interfaces;
 
 namespace Anselme.Contatos.Domain.Models
 {
-    public class ContatoService
+    public class PessoaJuridicaService
     {
         private readonly IRepository<Contato> _contatoRepository;
 
-        public ContatoService(IRepository<Contato> contatoRepository)
+        public PessoaJuridicaService(IRepository<Contato> contatoRepository)
         {
             _contatoRepository = contatoRepository;
         }

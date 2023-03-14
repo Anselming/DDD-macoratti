@@ -5,7 +5,7 @@ using Anselme.Contatos.Infrastructure.Contexts;
 namespace Anselme.Contatos.Infrastructure.Repositories
 {
     public abstract partial class BaseRepository<TEntity> : IRepository<TEntity>, IAsyncRepository<TEntity>
-                            where TEntity : BaseEntity
+                            where TEntity : BaseEntity, IAggregateRoot
     {
         public readonly AppDbContext _context;
         
@@ -13,6 +13,7 @@ namespace Anselme.Contatos.Infrastructure.Repositories
         {
             this._context = context;
         }
+
 
     }
 }

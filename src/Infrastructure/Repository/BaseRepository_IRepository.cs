@@ -5,7 +5,7 @@ using Anselme.Contatos.Infrastructure.Contexts;
 namespace Anselme.Contatos.Infrastructure.Repositories
 {
     public abstract partial class BaseRepository<TEntity> : IRepository<TEntity>, IAsyncRepository<TEntity>
-                            where TEntity : BaseEntity
+                            where TEntity : BaseEntity, IAggregateRoot
     {
         // CREATE
         public virtual void CreateNew(TEntity entity)
