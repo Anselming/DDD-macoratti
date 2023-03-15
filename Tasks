@@ -42,4 +42,43 @@ Começar a estudar os demais elementos do DDD
 
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Criar entidades
+- Criar Produto
+- Criar PessoaJuridica
+- Criar ComprovanteDeCompra
+
+
+Criar Testes
+- Para os models de 'Produto'
+- Para os models de 'Contato'
+- Para os models de 'ComprovanteDeCompra'
+- Na 'Infrastructure' 
+	- Criando banco de dados em memória com SQLite para testes
+
+Criar repositórios
+- Criar Produto
+- Criar PessoaJuridica
+- Criar ComprovanteDeCompra
+
+Criar serviços
+- Criar Produto
+- Criar PessoaJuridica
+- Criar ComprovanteDeCompra
+
+
+Front
+- Criar Rotas e expor
+
+===========================================
+
+Próxima versão
+
+- Utilizar Autommapper
+- Utilizar FluentValidator
+
+
+
+Faltou um git ignore

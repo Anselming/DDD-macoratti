@@ -61,6 +61,22 @@ public class DomainException : Exception
         }
     }
 
+    public static void ThrowIfCountsZero<T>(List<T> value, string message)
+    {
+        if (value.Count == 0)
+        {
+            throw new DomainException(message);
+        }
+    }    
+
+    public static void ThrowIfNotContains<T>(List<T> value, T mustContain, string message)
+    {
+        if (!value.Contains(mustContain))
+        {
+            throw new DomainException(message);
+        }
+    }        
+
     public static void ThrowIfNotMatch(string pattern, string stringValue, string message)
     {
         Regex regex = new Regex(pattern);

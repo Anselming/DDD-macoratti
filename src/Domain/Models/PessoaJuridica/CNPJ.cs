@@ -1,3 +1,4 @@
+namespace Anselme.Contatos.Domain.Models;
 public class CNPJ
 {
     public int Parte1{get; private set;}
@@ -5,7 +6,7 @@ public class CNPJ
     public int Parte3{get; private set;}
     public int Parte4{get; private set;}
 
-    public CNPJ(int parte1, int parte2, int parte3, int parte4, int digitoVerificador)
+    public CodigoCNPJ(int parte1, int parte2, int parte3, int parte4, int digitoVerificador)
     {
         Validar(parte1, parte2, parte3, parte4, digitoVerificador);
         this.Parte1 = parte1;
@@ -25,7 +26,10 @@ public class CNPJ
         DomainException.ThrowIfExceedLenghts(parte3, 0, 999,"A terceira parte do CNPJ não pode ser maior do que 999 (12.489.XXX/7890-12)");
         DomainException.ThrowIfExceedLenghts(parte4, 0, 9999,"A quarta parte do CNPJ não pode ser maior do que 9999 (12.489.456/XXXX-12)");
         DomainException.ThrowIfExceedLenghts(digitoVerificador, 0, 99,"O dígito verificador não pode ser maior do que 99 (12.489.456/4387-XX)");
+    }
 
-
+    public string ObterCodigoDeIdentificacaoDoCliente()
+    {
+        return ToString();
     }
 }
