@@ -1,3 +1,5 @@
+using Anselme.Contatos.Domain.Common;
+
 namespace Anselme.Contatos.Domain.Models
 {
     public class Produto : BaseEntity, IAggregateRoot

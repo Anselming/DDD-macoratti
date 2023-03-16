@@ -1,0 +1,32 @@
+using Anselme.Contatos.Domain.Interfaces;
+
+namespace Anselme.Contatos.Domain.Models
+{
+        // Ela possui tipo
+    // O limite das compras varia pelo tipo
+    // Possui n contatos e um principal
+    public class ClienteService
+    {
+        private readonly IRepository<Contato> _contatoRepository;
+
+        public PessoaJuridicaService(IRepository<Contato> contatoRepository)
+        {
+            _contatoRepository = contatoRepository;
+        }
+
+        public void Save(int id, string nome, string email)
+        {
+            var contato = _contatoRepository.GetById(id);
+
+            if(contato == null)
+            {
+                contato = new Contato(nome, email);
+                _contatoRepository.CreateNew(contato);
+            }
+            else
+            {
+                contato.Update(nome, email);
+            }
+        }
+    }
+}
