@@ -1,4 +1,4 @@
-using Anselme.Contatos.Domain.Interfaces;
+using Anselme.Contatos.Domain.Common;
 using Anselme.Contatos.Infrastructure.Contexts;
 
 namespace Anselme.Contatos.Infrastructure.Repositories

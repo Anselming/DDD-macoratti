@@ -1,5 +1,6 @@
-using Anselme.Contatos.Domain.Interfaces;
-using Anselme.Contatos.Domain.Models;
+using Anselme.Contatos.Domain.Aggregates;
+using Anselme.Contatos.Domain.Common;
+using Anselme.Contatos.Domain.Aggregates;
 using Anselme.Contatos.Infrastructure.Contexts;
 
 namespace Anselme.Contatos.Infrastructure.Repositories

@@ -1,8 +1,7 @@
 using System.Linq.Expressions;
-using Anselme.Contatos.Domain.Interfaces;
-using Anselme.Contatos.Domain.Models;
-using Anselme.Contatos.Infrastructure.Contexts;
+using Anselme.Contatos.Domain.Common;
 using Microsoft.EntityFrameworkCore;
+using Anselme.Contatos.Domain.Aggregates;
 
 namespace Anselme.Contatos.Infrastructure.Repositories
 {

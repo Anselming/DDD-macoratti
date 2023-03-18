@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Aq8d0dW8KqQPasDT/OXAo8xvwEResvZmvF2DFrdl177jA4uqnMqsyrIfJzzmP5SVwfcYFpW8U18/eZ3UOQNt0Q==",
+  "success": true,
+  "projectFilePath": "/home/thiago/Projects/DDD-macoratti/src/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/thiago/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using Anselme.Contatos.Domain.Models;
+using Anselme.Contatos.Domain.Aggregates;
 
 namespace Anselme.Contatos.Domain.Common
 {

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6IbIcmLfbKNJ72QLHSPpkH+GfgHdUXek/EGOngaMpAnwb5cl0vChYQEoHipPKTodFa5rrOr3wVGPO7+afvmgAg==",
+  "dgSpecHash": "lBXzv14PprGdM/m267cQtF/ENeVhwcF2JWRERdUVhLlau26RvWmlWATLCT26qCewUmJK40Mxea5oXTbOjnAsFg==",
   "success": true,
   "projectFilePath": "/home/thiago/Projects/DDD-macoratti/src/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/thiago/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/thiago/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/home/thiago/.nuget/packages/castle.core/5.1.0/castle.core.5.1.0.nupkg.sha512",
+    "/home/thiago/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/home/thiago/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/thiago/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/thiago/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

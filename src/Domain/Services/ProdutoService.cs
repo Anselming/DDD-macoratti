@@ -1,3 +1,4 @@
+using Anselme.Contatos.Domain.Aggregates;
 using Anselme.Contatos.Domain.Common;
 
 namespace Anselme.Contatos.Domain.Models
