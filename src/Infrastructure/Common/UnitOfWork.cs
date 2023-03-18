@@ -1,7 +1,7 @@
 using Anselme.Contatos.Domain.Common;
-using Anselme.Contatos.Infrastructure.Contexts;
+using Anselme.Contatos.Infrastructure.Context;
 
-namespace Anselme.Contatos.Infrastructure.Repositories
+namespace Anselme.Contatos.Infrastructure.Common
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {

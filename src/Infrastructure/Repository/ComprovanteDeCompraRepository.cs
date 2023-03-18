@@ -5,9 +5,9 @@ using Anselme.Contatos.Infrastructure.Context;
 
 namespace Anselme.Contatos.Infrastructure.Repository
 {
-    public class ContatoRepository : BaseRepository<Cliente>, IClienteRepository
+    public class ComprovanteDeCompraRepository : BaseRepository<Cliente>, IClienteRepository
     {
-        public ContatoRepository(AppDbContext context) : base(context)
+        public ComprovanteDeCompraRepository(AppDbContext context) : base(context)
         {
         }
 
@@ -28,14 +28,7 @@ namespace Anselme.Contatos.Infrastructure.Repository
 
         public ComprovanteDeCompra EfetuarCompra(List<KeyValuePair<Produto,int>> produtosEQuantidades, Cliente cliente )
         {
-            DatabaseProfileMapper profile = new DatabaseProfileMapper();
-            var mapper = profile.GetMap().CreateMapper();
-
-            var ClienteDTO = mapper.Map<Cliente, DatabaseModel.Cliente>(cliente);
-            
-            // Ação qualquer ...
-
-            return new ComprovanteDeCompra(new List<ItemDeCompra>(), DateTime.Now, 1, "aaa", "abc");            
+            return null;
         }
     }
 }

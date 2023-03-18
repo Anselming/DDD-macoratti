@@ -3,20 +3,27 @@ using Anselme.Contatos.Domain.Common;
 
 namespace Anselme.Contatos.Domain.Models
 {
-    public class ClienteService
+    public class CompraService
     {
+        private readonly IRepository<Produto> _produtoRepository;
         private readonly IClienteRepository _clienteRepository;
 
-        public ClienteService(IClienteRepository clienteRepository)
+        public CompraService(IRepository<Produto> produtoRepository, IClienteRepository clienteRepository)
         {
+            this._produtoRepository = produtoRepository;
             this._clienteRepository = clienteRepository;
         }
+
+        public void RegistrarNovoProduto(Produto produto)
+        {
+            _produtoRepository.CreateNew(produto);
+        }      
 
         public void RegistrarNovoCliente(Cliente cliente)
         {
             _clienteRepository.CreateNew(cliente);
         }    
-        
+
         public ComprovanteDeCompra EfetuarCompra(List<KeyValuePair<Produto,int>> produtosEQuantidades, Cliente cliente )
         {
             decimal precoTotal = produtosEQuantidades.Sum(i => i.Key.Preco * i.Value);
@@ -45,6 +52,6 @@ namespace Anselme.Contatos.Domain.Models
             }
 
             throw new DomainException("Operação 'EfetuarCompra' não obteve sucesso por não ter parâmetros válidos.");
-        }                  
+        }            
     }
 }

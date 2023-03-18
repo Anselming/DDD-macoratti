@@ -1,92 +1,20 @@
-1 - Criar o repositóry async
-	- colocar numa classe parcial
+* Colocar o automapper no repositório
+* Fazer a devida escrita no banco
 
-2 - Estruturar para usar IAgrregateRoot
-	- Modificar o repositório para lidar com IAgrregateRoot
-	- criar uma agregação mais completa, com VO e Outras Entidades
-	- Fazer a funcionalidade completa da classe CPF
-	- Estruturar a solução para guardar o CPF numa coluna
-	- Criar outra estrutura de Cliente (Pessoa Jurídica) que pode ter n contatos
-	- Nesse caso Cliente passa a ser o AgrregateRoot
-	============
-	- Criar outra Estrutura com as Compras realizadas
-	- Ordem de Compra
-	- Item da ordem de Compra
-	- Produto
-	- Essa estrutura será bem mais rica, mas para o mesmo contexto.
+* Estudar Domain Services (Repository), Factory e Domain Events (por último)
 
-3 - Utilizar o Assertion COncert
+* Documentar
+	- Mapa de agregados para o AnselmeX
+	- Mapa C4 para o AnselmeX
+	- Entender o PlantUML
 
-4 - Utilizar o AutoMapper
+* Expor métodos relevantes para o Front End
 
-5 - Utilizar o Fluent Validation
+* Artigo: Projeto de DDD de exemplo com o AnselmeX (sem Domain Events?)
 
-6 - Criar testes
+* Fazer diversos artigos menores
+
+* Implantar testes na solução
+	- Colocar testes em cada camada (?)
 
 
-Procurar por outras boas práticas
-Fechar o Projeto
-Documentar
-
---------
-Avançar com o DDD
-- Mapa de Agregados
-- Mapa C4
-- Entender o PlantUML
-
-- Estruturar toda a solução DDD (sem uso dos demais delementos (DomainEvent, etc.)
-===================================
-
-Adaptar o AnselmeX
-Começar a estudar os demais elementos do DDD
-
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-Criar entidades
-- Criar Produto
-- Criar PessoaJuridica
-- Criar ComprovanteDeCompra
-
-
-Criar Testes
-- Para os models de 'Produto'
-- Para os models de 'Contato'
-- Para os models de 'ComprovanteDeCompra'
-- Na 'Infrastructure' 
-	- Criando banco de dados em memória com SQLite para testes
-
-Criar repositórios
-- Criar Produto
-- Criar PessoaJuridica
-- Criar ComprovanteDeCompra
-
-Criar serviços
-- Criar Produto
-- Criar PessoaJuridica
-- Criar ComprovanteDeCompra
-
-
-Front
-- Criar Rotas e expor
-
-===========================================
-
-Próxima versão
-
-- Utilizar Autommapper
-- Utilizar FluentValidator
-
-
-
-Faltou um git ignore
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Finalizar o Domain
-Implentar o que falta do repositório
-Fazer testes no repositorio
-Criar testes unitários para toda a domain

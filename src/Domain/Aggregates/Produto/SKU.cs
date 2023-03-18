@@ -5,7 +5,6 @@ namespace Anselme.Contatos.Domain.Aggregates
     public class SKU
     {
         public string CodigoSKU { get; private set; }
-        public decimal Preco { get; private set; }
         public string Fabricante { get; private set; }
         public string Modelo { get; private set; }
         public string Especificidade { get; private set; }
@@ -16,7 +15,6 @@ namespace Anselme.Contatos.Domain.Aggregates
         public SKU(decimal preco, string fabricante, string modelo, string especificidade, string cor, string tamanho)
         {
             Validar(preco, fabricante, modelo, especificidade, cor, tamanho);
-            this.Preco = preco;
             this.Fabricante = fabricante;
             this.Modelo = modelo;
             this.Especificidade = especificidade;
