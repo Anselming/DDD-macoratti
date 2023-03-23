@@ -1,0 +1,5 @@
+/home/thiago/Projects/DDD-macoratti/src/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/home/thiago/Projects/DDD-macoratti/src/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Projects/DDD-macoratti/src/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache
+/home/thiago/Projects/DDD-macoratti/src/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs
+/home/thiago/Projects/DDD-macoratti/src/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache

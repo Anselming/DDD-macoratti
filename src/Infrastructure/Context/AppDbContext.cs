@@ -1,4 +1,4 @@
-using Anselme.Contatos.Infrastructure.DatabaseModel;
+using Anselme.Contatos.Infrastructure.DbEntity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Anselme.Contatos.Infrastructure.Context

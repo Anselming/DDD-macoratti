@@ -1,10 +1,12 @@
 using AutoMapper;
 
 using AGGREGATE = Anselme.Contatos.Domain.Aggregates;
-using DATABASE = Anselme.Contatos.Infrastructure.DatabaseModel;
+using DATABASE = Anselme.Contatos.Infrastructure.DbEntity;
 
+
+namespace Anselme.Contatos.Infrastructure.DbEntity;
 // This is the approach starting with version 5
-public class DatabaseProfileMapper
+public class DbEntityProfileMapper
 {
     public IMapper Mapper
     {
@@ -26,15 +28,15 @@ public class DatabaseProfileMapper
                     .ForMember(member => member.Apelido, map => map.MapFrom(source => source.NomeDoCliente.Apelido))
                     .ForMember(member => member.ComoPrefereSerChamado, map => map.MapFrom(source => source.NomeDoCliente.ComoPrefereSerChamado))
                     // Email
-                    .ForMember(member => member.Email, map => map.MapFrom(source => source.Email.ToString()))
+                    .ForMember(member => member.Email, map => map.MapFrom(source => source.Email.ToString()));
                     // Telefones
-                    .ForMember(member => member.Telefones, map => map.MapFrom(source => source.Telefones))
+                    //.ForMember(member => member.Telefones, map => map.MapFrom(source => source.Telefones))
                     // Telefone
-                    .ForMember(member => member.TelefonePrincipal, map => map.MapFrom(source => source.TelefonePrincipal))
+                    //.ForMember(member => member.TelefonePrincipal, map => map.MapFrom(source => source.TelefonePrincipal))
                     // Endereços
-                    .ForMember(member => member.Enderecos, map => map.MapFrom(source => source.Enderecos))
+                    //.ForMember(member => member.Enderecos, map => map.MapFrom(source => source.Enderecos))
                     // Endereço
-                    .ForMember(member => member.EnderecoPrincipal, map => map.MapFrom(source => source.EnderecoPrincipal));
+                    //.ForMember(member => member.EnderecoPrincipal, map => map.MapFrom(source => source.EnderecoPrincipal));
                                         
                cfg.CreateMap<AGGREGATE.ComprovanteDeCompra, DATABASE.ComprovanteDeCompra>();
                cfg.CreateMap<AGGREGATE.Endereco, DATABASE.Endereco>();

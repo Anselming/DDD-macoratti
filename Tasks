@@ -1,4 +1,5 @@
 * Colocar o automapper no repositório
+
 * Fazer a devida escrita no banco
 
 * Estudar Domain Services (Repository), Factory e Domain Events (por último)

@@ -2,76 +2,94 @@ using System.Linq.Expressions;
 using Anselme.Contatos.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Anselme.Contatos.Domain.Aggregates;
+using Anselme.Contatos.Infrastructure.DbEntity;
 
 namespace Anselme.Contatos.Infrastructure.Common
 {
-    public abstract partial class BaseRepository<TEntity> : IRepository<TEntity>, IAsyncRepository<TEntity>
-                            where TEntity : BaseEntity, IAggregateRoot
+    public abstract partial class BaseRepository<TAggregate, TDBEntity> : IRepository<TAggregate>, IAsyncRepository<TAggregate>
+                            where TAggregate : BaseEntity, IAggregateRoot
+                            where TDBEntity : BaseDbEntity
     {
         // CREATE
-        public virtual async Task CreateNewAsync(TEntity entity)
+        public virtual async Task CreateNewAsync(TAggregate entity)
         {
-            await _context.Set<TEntity>().AddAsync(entity);
+            var thisContext = _context.Set<TDBEntity>();
+            await thisContext.AddAsync(ConvertAggregateToDbEntity(entity));
         }
 
         // READ
-        public virtual async Task<TEntity> GetByIdAsync(int id)
+        public virtual async Task<TAggregate> GetByIdAsync(int id)
         {
-            return await _context.Set<TEntity>().FindAsync(id);
+            var thisContext = _context.Set<TDBEntity>();
+            return await ConvertDbEntityToAggregate(thisContext.FindAsync(id));
         }
-        public virtual async Task<List<TEntity>> GetAllAsync()
+        public virtual async Task<List<TAggregate>> GetAllAsync()
         {
-            return await _context.Set<TEntity>().ToListAsync();
+            var thisContext = _context.Set<TDBEntity>();
+            return await ConvertDbEntityToAggregate(thisContext.ToListAsync());
         }
-        public virtual async Task<List<TEntity>> GetAllAsync(int skip, int take)
+        public virtual async Task<List<TAggregate>> GetAllAsync(int skip, int take)
         {
-            return await _context.Set<TEntity>().Skip(skip).Take(take).ToListAsync();
+            var thisContext = _context.Set<TDBEntity>();
+            return await ConvertDbEntityToAggregate(thisContext.Skip(skip).Take(take).ToListAsync());
         }
-        public virtual async Task<TEntity> GetFirstByConditionAsync(Expression<Func<TEntity,bool>> condition)
+        public virtual async Task<TAggregate> GetFirstByConditionAsync(Expression<Func<TAggregate,bool>> condition)
         {
-            return await _context.Set<TEntity>().FirstOrDefaultAsync(condition);
+            var context = _context.Set<TDBEntity>();
+            var convertedCondition = ConvertAggregateFuncToDbEntity(condition);
+            var dbEntity = context.FirstOrDefault(convertedCondition);
+
+            return await ConvertDbEntityToAggregateinTask(dbEntity);
         }
-        public virtual async Task<List<TEntity>> GetByConditionAsync(Expression<Func<TEntity, bool>> condition)
+        public virtual async Task<List<TAggregate>> GetByConditionAsync(Expression<Func<TAggregate, bool>> condition)
         {
-            return await _context.Set<TEntity>().Where(condition).ToListAsync();
+            var context = _context.Set<TDBEntity>();
+            var convertedCondition = ConvertAggregateFuncToDbEntity(condition);
+            var dbEntity = context.Where(convertedCondition).ToListAsync();
+
+            return await ConvertDbEntityToAggregate(dbEntity);
         }
 
     
         // UPDATE
-        public virtual Task UpdateAsync(TEntity entity)
+        public virtual Task UpdateAsync(TAggregate entity)
         {
-            _context.Set<TEntity>().Update(entity);
+            _context.Set<TDBEntity>().Update(ConvertAggregateToDbEntity(entity));
             return Task.CompletedTask;
         }
-        public virtual Task UpdateAsync(TEntity[] entities)
+        public virtual Task UpdateAsync(TAggregate[] entities)
         {
-           _context.Set<TEntity>().UpdateRange(entities);
+           _context.Set<TDBEntity>().UpdateRange(ConvertAggregateToDbEntity(entities));
             return Task.CompletedTask;
         }
 
 
         // DELETE
-        public virtual Task DeleteAsync(TEntity entity)
+        public virtual Task DeleteAsync(TAggregate entity)
         {
-            _context.Set<TEntity>().Remove(entity);
+            _context.Set<TDBEntity>().Remove(ConvertAggregateToDbEntity(entity));
             return Task.CompletedTask;
         }
-        public virtual Task DeleteAsync(TEntity[] entities)
+        public virtual Task DeleteAsync(TAggregate[] entities)
         {
-            _context.Set<TEntity>().RemoveRange(entities);
+            _context.Set<TDBEntity>().RemoveRange(ConvertAggregateToDbEntity(entities));
             return Task.CompletedTask;
         }
         public virtual async Task DeleteByIdAsync(int id)
         {
-            await _context.Set<TEntity>().Where(i => i.Id == id).ExecuteDeleteAsync();            
+            await _context.Set<TDBEntity>().Where(i => i.Id == id).ExecuteDeleteAsync();            
         }
         public virtual async Task DeleteByIdAsync(int[] ids)
         {
-             await _context.Set<TEntity>().Where(i => ids.Contains(i.Id)).ExecuteDeleteAsync();
+             await _context.Set<TDBEntity>().Where(i => ids.Contains(i.Id)).ExecuteDeleteAsync();
         }
-        public virtual async Task DeleteByConditionAsync(Expression<Func<TEntity,bool>> condition)
+        public virtual async Task DeleteByConditionAsync(Expression<Func<TAggregate,bool>> condition)
         {
-            await _context.Set<TEntity>().Where(condition).ExecuteDeleteAsync();
+            var context = _context.Set<TDBEntity>();
+            var convertedCondition = ConvertAggregateFuncToDbEntity(condition);
+            var dbEntity = context.Where(convertedCondition);
+
+            await ConvertSimpleTask<int>(dbEntity.ExecuteDeleteAsync());
         }
     }
 }

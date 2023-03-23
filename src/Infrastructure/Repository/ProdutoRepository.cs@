@@ -1,0 +1,14 @@
+using Anselme.Contatos.Domain.Aggregates;
+using Anselme.Contatos.Domain.Common;
+using Anselme.Contatos.Infrastructure.Common;
+using Anselme.Contatos.Infrastructure.Context;
+
+namespace Anselme.Contatos.Infrastructure.Repository
+{
+    public class ProdutoRepository : BaseRepository<Cliente>
+    {
+        public ProdutoRepository(AppDbContext context) : base(context)
+        {
+        }
+    }
+}

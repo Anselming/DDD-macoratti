@@ -2,26 +2,26 @@ using Anselme.Contatos.Domain.Aggregates;
 
 namespace Anselme.Contatos.Domain.Common
 {
-    public interface IRepository<TEntity> where TEntity : BaseEntity
+    public interface IRepository<TAggregate> where TAggregate : BaseEntity
     {
         // Create
-        void CreateNew(TEntity entity);
+        void CreateNew(TAggregate entity);
 
         // Read
-        TEntity GetById(int id);
-        IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> GetAll(int skip, int take);
+        TAggregate GetById(int id);
+        IEnumerable<TAggregate> GetAll();
+        IEnumerable<TAggregate> GetAll(int skip, int take);
 
         // Update
-        void Update(TEntity entity);
-        void Update(TEntity[] entities);
+        void Update(TAggregate entity);
+        void Update(TAggregate[] entities);
 
         // Delete
-        void Delete(TEntity entity);
-        void  Delete(TEntity[] entities);
+        void Delete(TAggregate entity);
+        void  Delete(TAggregate[] entities);
         void  DeleteById(int id);
         void  DeleteById(int[] ids);
-        void  DeleteByCondition(Func<TEntity,bool> condition);
+        void  DeleteByCondition(Func<TAggregate,bool> condition);
 
     }
 }
